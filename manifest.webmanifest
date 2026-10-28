@@ -1,0 +1,36 @@
+{
+  "id": "./app.html",
+  "name": "MiStock · Mi inventario",
+  "short_name": "MiStock",
+  "description": "Productos, movimientos y alertas para tu negocio.",
+  "lang": "es",
+  "start_url": "./app.html?from=installed",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f1f5fd",
+  "theme_color": "#0057e7",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Productos",
+      "url": "./app.html?page=products"
+    },
+    {
+      "name": "Movimientos",
+      "url": "./app.html?page=movements"
+    }
+  ]
+}
