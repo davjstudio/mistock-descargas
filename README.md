@@ -1,10 +1,10 @@
-# MiStock
+# MiStock Descargas
 
-Página de descargas y aplicación web instalable de MiStock.
+Portal de descargas de MiStock para Windows y Android, con acceso a la versión web instalable. El nombre `mistock` queda disponible para la web principal.
 
-- Sitio: https://davjstudio.github.io/mistock/
-- Aplicación web: https://davjstudio.github.io/mistock/app.html
-- Instaladores: https://github.com/davjstudio/mistock/releases
+- Sitio: https://davjstudio.github.io/mistock-descargas/
+- Aplicación web: https://davjstudio.github.io/mistock-descargas/app.html
+- Instaladores: https://github.com/davjstudio/mistock-descargas/releases
 
 ## Versiones
 
