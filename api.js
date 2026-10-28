@@ -38,7 +38,7 @@ const text=v=>({stringValue:String(v)}),integer=v=>({integerValue:String(v)});
 export function parseProduct(doc){
  const f=doc.fields||{};const price=Number(f.price?.doubleValue??f.price?.integerValue??0);
  if(!Number.isFinite(price))throw new AppError('Un producto tiene un precio no válido.');
- return {id:doc.name.split('/').at(-1),code:f.code?.stringValue||'',name:f.name?.stringValue||'',price,stock:parseInteger(f.stock?.integerValue),minStock:parseInteger(f.minStock?.integerValue,3),category:f.category?.stringValue||'',description:f.description?.stringValue||'',updateTime:doc.updateTime||''};
+ return {id:doc.name.split('/').at(-1),code:f.code?.stringValue||'',name:f.name?.stringValue||'',price,stock:parseInteger(f.stock?.integerValue),minStock:parseInteger(f.minStock?.integerValue,3),category:f.category?.stringValue||'',description:f.description?.stringValue||'',imageBase64:f.imageBase64?.stringValue||'',updateTime:doc.updateTime||''};
 }
 export function parseMovement(doc){
  const f=doc.fields||{};const raw=f.date?.timestampValue;const date=raw&&Number.isFinite(Date.parse(raw))?new Date(raw).toISOString():null;
@@ -83,7 +83,7 @@ export class FirebaseClient{
  async profile(){const doc=await this.optional(this.userPath),f=doc?.fields||{};return {name:f.name?.stringValue||this.displayName,email:this.email,phone:f.phone?.stringValue||'',notificationsEnabled:f.notificationsEnabled?.booleanValue??true};}
  async setNotifications(enabled){await this.send('PATCH',`${this.userPath}?updateMask.fieldPaths=notificationsEnabled`,{fields:{notificationsEnabled:{booleanValue:enabled}}});}
  async saveProduct(product,isNew){
-  const fields={name:text(product.name),price:{doubleValue:product.price},stock:integer(product.stock),minStock:integer(product.minStock),category:text(product.category),description:text(product.description)};
+  const fields={name:text(product.name),price:{doubleValue:product.price},stock:integer(product.stock),minStock:integer(product.minStock),category:text(product.category),description:text(product.description),imageBase64:text(product.imageBase64||'')};
   if(isNew)fields.code=text(product.code);
   const write={update:{name:`projects/${this.config.projectId}/databases/(default)/documents/${this.userPath}/products/${encodeURIComponent(product.id)}`,fields},updateMask:{fieldPaths:Object.keys(fields)},currentDocument:isNew?{exists:false}:{updateTime:product.updateTime}};
   if(isNew)write.updateTransforms=[{fieldPath:'createdAt',setToServerValue:'REQUEST_TIME'}];
