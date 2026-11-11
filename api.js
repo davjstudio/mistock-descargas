@@ -109,3 +109,15 @@ export class FirebaseClient{
 }
 export const csvCell=value=>{let text=String(value??'');if(/^[\s]*[=+@-]|^[\t\r]/.test(text))text="'"+text;return '"'+text.replaceAll('"','""')+'"';};
 export function exportCsv(products){return '\ufeff'+['Código;Producto;Categoría;Precio (S/);Stock;Stock mínimo;Estado;Descripción',...products.map(p=>[p.code,p.name,p.category,p.price.toFixed(2),p.stock,p.minStock,statusOf(p),p.description].map(csvCell).join(';'))].join('\r\n')+'\r\n';}
+
+export function exportMovementsCsv(movements) {
+ const rows = movements.map(movement => [
+  movement.date,
+  movement.type === 'out' ? 'Salida' : 'Entrada',
+  movement.productName,
+  movement.quantity,
+  movement.note,
+  movement.productId,
+ ].map(csvCell).join(';'));
+ return '\ufeff' + ['Fecha (UTC);Tipo;Producto;Cantidad;Nota;ID del producto', ...rows].join('\r\n') + '\r\n';
+}
