@@ -1,9 +1,9 @@
 {
   "windows": {
-    "filename": "MiStock-Windows-1.3.exe",
-    "label": "Windows 1.3 · Fotos de productos",
-    "bytes": 64814888,
-    "sha256": "e978f807788346a65378f4ef2fe3a1c8ad07e9db9b6d7a93939cee3ccda82322"
+    "filename": "MiStock-Windows-1.4.exe",
+    "label": "Windows 1.4 · 64 bits",
+    "bytes": 64819380,
+    "sha256": "3469fa0cefc89b83ec1cd64849ab30e8093f638ac7fad355370a44b5818bfadf"
   },
   "android": {
     "filename": "MiStock-Android.apk",
