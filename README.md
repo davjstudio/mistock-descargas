@@ -8,7 +8,7 @@ Portal de descargas de MiStock para Windows y Android, con acceso a la web princ
 
 ## Versiones
 
-Windows 1.4.1 (EXE portátil de 64 bits con navegación superior), APK Android de prueba y aplicación web que se puede añadir al inicio del iPhone desde Safari.
+Windows 1.4.2 (EXE portátil de 64 bits con navegación superior), APK Android de prueba y aplicación web que se puede añadir al inicio del iPhone desde Safari.
 
 La web usa el mismo proyecto Firebase y las mismas cuentas que las aplicaciones. Incluye inventario con fotos de productos, movimientos de entrada y salida, alertas de stock, perfil y exportación CSV.
 
@@ -20,4 +20,4 @@ La demostración usa datos temporales y no modifica cuentas reales. La configura
 
 ## Publicación
 
-Los archivos del sitio se publican desde la raíz de la rama `main` mediante GitHub Pages. El EXE se distribuye como archivo adjunto de la versión `v1.4.1` en Releases. La descarga del APK está en `v1.3`.
+Los archivos del sitio se publican desde la raíz de la rama `main` mediante GitHub Pages. El EXE se distribuye como archivo adjunto de la versión `v1.4.2` en Releases. La descarga del APK está en `v1.3`.
