@@ -1,14 +1,14 @@
 {
   "windows": {
-    "filename": "MiStock-Windows-1.4.2.exe",
-    "label": "Windows 1.4.2 · 64 bits",
-    "bytes": 64819086,
-    "sha256": "922657c10e2ba1cd773c21a238f8587b8643e132799c3e4263308cfacce9423c"
+    "filename": "MiStock-Windows-1.5.exe",
+    "label": "Windows 1.5 · Básico y Pro",
+    "bytes": 64828735,
+    "sha256": "3e58f90eb8877b70e72057a4903885866fc0b067dcc65a72c72fa7c98d8d199c"
   },
   "android": {
     "filename": "MiStock-Android.apk",
-    "label": "Android · APK con fotos",
-    "bytes": 23244767,
-    "sha256": "d7dbc0fe1a63ef05e7af956d5ddd932b389da580e9c1e31ca2481730503568a4"
+    "label": "Android · Básico y Pro",
+    "bytes": 23357354,
+    "sha256": "d9fe71e744643fdd6e74ed746a690a57d9560b990386efbe4aec9e1fa1bf5fc3"
   }
 }
