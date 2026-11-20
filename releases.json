@@ -1,9 +1,9 @@
 {
   "windows": {
-    "filename": "MiStock-Windows-1.5.exe",
-    "label": "Windows 1.5 · Básico y Pro",
-    "bytes": 64828735,
-    "sha256": "3e58f90eb8877b70e72057a4903885866fc0b067dcc65a72c72fa7c98d8d199c"
+    "filename": "MiStock-Windows-1.5.1.exe",
+    "label": "Windows 1.5.1 · Básico y Pro",
+    "bytes": 64828743,
+    "sha256": "3d9bcc11e4d6d8db62c251ef7602d8b4a8c6664be5d1edebb3706db70030c7cb"
   },
   "android": {
     "filename": "MiStock-Android.apk",
